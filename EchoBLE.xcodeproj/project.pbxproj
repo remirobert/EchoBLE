@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BB571D791E22A6F50028773B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571D781E22A6F50028773B /* AppDelegate.swift */; };
-		BB571D7B1E22A6F50028773B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571D7A1E22A6F50028773B /* ViewController.swift */; };
-		BB571D7E1E22A6F50028773B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB571D7C1E22A6F50028773B /* Main.storyboard */; };
 		BB571D801E22A6F50028773B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB571D7F1E22A6F50028773B /* Assets.xcassets */; };
 		BB571D831E22A6F50028773B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB571D811E22A6F50028773B /* LaunchScreen.storyboard */; };
 		BB571D8E1E22A6F50028773B /* EchoBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571D8D1E22A6F50028773B /* EchoBLETests.swift */; };
+		BBDB1F911E22A8B500242D3B /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F901E22A8B500242D3B /* BluetoothManager.swift */; };
+		BBDB1F941E22A9E500242D3B /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F931E22A9E500242D3B /* Peripheral.swift */; };
+		BBDB1F971E22B01800242D3B /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDB1F961E22B01800242D3B /* Scan.storyboard */; };
+		BBDB1F991E22B1FF00242D3B /* ScanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +30,16 @@
 /* Begin PBXFileReference section */
 		BB571D751E22A6F50028773B /* EchoBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB571D781E22A6F50028773B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB571D7A1E22A6F50028773B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB571D7D1E22A6F50028773B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB571D7F1E22A6F50028773B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB571D821E22A6F50028773B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB571D841E22A6F50028773B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB571D891E22A6F50028773B /* EchoBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB571D8D1E22A6F50028773B /* EchoBLETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoBLETests.swift; sourceTree = "<group>"; };
 		BB571D8F1E22A6F50028773B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDB1F901E22A8B500242D3B /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		BBDB1F931E22A9E500242D3B /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		BBDB1F961E22B01800242D3B /* Scan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
+		BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,14 @@
 		BB571D771E22A6F50028773B /* EchoBLE */ = {
 			isa = PBXGroup;
 			children = (
-				BB571D781E22A6F50028773B /* AppDelegate.swift */,
-				BB571D7A1E22A6F50028773B /* ViewController.swift */,
-				BB571D7C1E22A6F50028773B /* Main.storyboard */,
-				BB571D7F1E22A6F50028773B /* Assets.xcassets */,
-				BB571D811E22A6F50028773B /* LaunchScreen.storyboard */,
-				BB571D841E22A6F50028773B /* Info.plist */,
+				BBDB1F921E22A9DC00242D3B /* Models */,
+				BBDB1F8F1E22A89000242D3B /* Protocol */,
+				BBDB1F8E1E22A88A00242D3B /* Extensions */,
+				BBDB1F8D1E22A88300242D3B /* Views */,
+				BBDB1F8C1E22A87A00242D3B /* ViewModels */,
+				BBDB1F8A1E22A80C00242D3B /* Ressources */,
+				BBDB1F871E22A75C00242D3B /* Manager */,
+				BBDB1F861E22A75400242D3B /* Controllers */,
 			);
 			path = EchoBLE;
 			sourceTree = "<group>";
@@ -94,6 +100,86 @@
 				BB571D8F1E22A6F50028773B /* Info.plist */,
 			);
 			path = EchoBLETests;
+			sourceTree = "<group>";
+		};
+		BBDB1F861E22A75400242D3B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB571D781E22A6F50028773B /* AppDelegate.swift */,
+				BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BBDB1F871E22A75C00242D3B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BBDB1F901E22A8B500242D3B /* BluetoothManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		BBDB1F8A1E22A80C00242D3B /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				BB571D7F1E22A6F50028773B /* Assets.xcassets */,
+				BBDB1F951E22AFE000242D3B /* Others */,
+				BBDB1F8B1E22A81B00242D3B /* Storyboards */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		BBDB1F8B1E22A81B00242D3B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BB571D811E22A6F50028773B /* LaunchScreen.storyboard */,
+				BBDB1F961E22B01800242D3B /* Scan.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BBDB1F8C1E22A87A00242D3B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		BBDB1F8D1E22A88300242D3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BBDB1F8E1E22A88A00242D3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BBDB1F8F1E22A89000242D3B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		BBDB1F921E22A9DC00242D3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBDB1F931E22A9E500242D3B /* Peripheral.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BBDB1F951E22AFE000242D3B /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BB571D841E22A6F50028773B /* Info.plist */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +269,7 @@
 			files = (
 				BB571D831E22A6F50028773B /* LaunchScreen.storyboard in Resources */,
 				BB571D801E22A6F50028773B /* Assets.xcassets in Resources */,
-				BB571D7E1E22A6F50028773B /* Main.storyboard in Resources */,
+				BBDB1F971E22B01800242D3B /* Scan.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB571D7B1E22A6F50028773B /* ViewController.swift in Sources */,
+				BBDB1F911E22A8B500242D3B /* BluetoothManager.swift in Sources */,
 				BB571D791E22A6F50028773B /* AppDelegate.swift in Sources */,
+				BBDB1F941E22A9E500242D3B /* Peripheral.swift in Sources */,
+				BBDB1F991E22B1FF00242D3B /* ScanListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BB571D7C1E22A6F50028773B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB571D7D1E22A6F50028773B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB571D811E22A6F50028773B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -410,6 +490,7 @@
 				BB571D941E22A6F50028773B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB571D951E22A6F50028773B /* Build configuration list for PBXNativeTarget "EchoBLETests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +499,7 @@
 				BB571D971E22A6F50028773B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
