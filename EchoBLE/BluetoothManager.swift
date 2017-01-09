@@ -9,6 +9,10 @@
 import UIKit
 import CoreBluetooth
 
+protocol BluetoothManagerDelegate: class {
+    func didUpdateScan()
+}
+
 final class BluetoothManager: NSObject {
 
     var manager: CBCentralManager!
@@ -17,6 +21,8 @@ final class BluetoothManager: NSObject {
     var isEnabled = false
     var visiblePeripheralUUIDs = NSMutableOrderedSet()
     var visiblePeripherals = [String: Peripheral]()
+
+    weak var delegate: BluetoothManagerDelegate?
 
     override init() {
         super.init()
@@ -59,5 +65,6 @@ extension BluetoothManager: CBCentralManagerDelegate {
         print("Peripheral found with name: \(peripheral.name)\nUUID: \(peripheral.identifier.uuidString)\nRSSI: \(RSSI)\nAdvertisement Data: \(advertisementData)")
         visiblePeripheralUUIDs.add(peripheral.identifier.uuidString)
         visiblePeripherals[peripheral.identifier.uuidString] = Peripheral(peripheral: peripheral, RSSI: RSSI.stringValue, advertisementDictionary: advertisementData as NSDictionary)
+        self.delegate?.didUpdateScan()
     }
 }

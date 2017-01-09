@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uMz-TE-JzI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scan List View Controller-->
         <scene sceneID="CcX-uJ-7vW">
             <objects>
-                <viewController id="tFA-JN-KEe" sceneMemberID="viewController">
+                <viewController id="tFA-JN-KEe" customClass="ScanListViewController" customModule="EchoBLE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Q4-rP-e3G"/>
                         <viewControllerLayoutGuide type="bottom" id="hlE-X8-xOL"/>
@@ -35,6 +35,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fBw-4H-S8A"/>
+                    <connections>
+                        <outlet property="tableview" destination="zUA-8D-IkW" id="b2T-cg-trU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kx4-1r-P0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

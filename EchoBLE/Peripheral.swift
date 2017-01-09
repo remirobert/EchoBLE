@@ -14,7 +14,7 @@ struct Peripheral {
     var name: String?
     var UUID: String
     var RSSI: String
-    var connectable = "No"
+    var connectable = false
 
     init(peripheral: CBPeripheral, RSSI: String, advertisementDictionary: NSDictionary) {
         self.peripheral = peripheral
@@ -22,7 +22,7 @@ struct Peripheral {
         UUID = peripheral.identifier.uuidString
         self.RSSI = RSSI
         if let isConnectable = advertisementDictionary[CBAdvertisementDataIsConnectable] as? NSNumber {
-            connectable = (isConnectable.boolValue) ? "Yes" : "No"
+            connectable = isConnectable.boolValue
         }
     }
 }
