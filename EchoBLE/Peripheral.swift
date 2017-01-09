@@ -18,7 +18,7 @@ struct Peripheral {
 
     init(peripheral: CBPeripheral, RSSI: String, advertisementDictionary: NSDictionary) {
         self.peripheral = peripheral
-        name = peripheral.name ?? "No name."
+        name = peripheral.name ?? "N/A"
         UUID = peripheral.identifier.uuidString
         self.RSSI = RSSI
         if let isConnectable = advertisementDictionary[CBAdvertisementDataIsConnectable] as? NSNumber {

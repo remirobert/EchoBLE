@@ -18,6 +18,14 @@ class ScanListViewController: UIViewController {
         BluetoothManager.shared.delegate = self
         tableview.register(UINib(nibName: "ScanListPeripheralTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableview.dataSource = self
+        tableview.delegate = self
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueDetail" {
+            guard let controller = segue.destination as? DetailPeripheralViewController else {return}
+            controller.peripheral = sender as? Peripheral
+        }
     }
 }
 
@@ -25,6 +33,17 @@ extension ScanListViewController: BluetoothManagerDelegate {
 
     func didUpdateScan() {
         tableview.reloadData()
+    }
+}
+
+extension ScanListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let indexKey = BluetoothManager.shared.visiblePeripheralUUIDs.object(at: indexPath.row) as? String,
+            let peripheral = BluetoothManager.shared.visiblePeripherals[indexKey] else {
+                return
+        }
+        self.performSegue(withIdentifier: "segueDetail", sender: peripheral)
     }
 }
 
