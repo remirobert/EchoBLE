@@ -23,6 +23,7 @@ class ScanListPeripheralTableViewCell: UITableViewCell {
         self.labelRSSI.text = peripheral.RSSI
         self.labelUUIDPeripheral.text = peripheral.UUID
 
-        self.labelNamePeripheral.textColor = peripheral.connectable ? UIColor.green.withAlphaComponent(0.5) : UIColor.orange.withAlphaComponent(0.5)
+        self.labelNamePeripheral.textColor = peripheral.connectable ?
+            UIColor.green.withAlphaComponent(0.5) : UIColor.orange.withAlphaComponent(0.5)
     }
 }

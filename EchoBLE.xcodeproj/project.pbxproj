@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2E4AB71E25522600C99860 /* AdverstisementDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E4AB51E25522600C99860 /* AdverstisementDataTableViewCell.swift */; };
+		BB2E4AB81E25522600C99860 /* AdverstisementDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2E4AB61E25522600C99860 /* AdverstisementDataTableViewCell.xib */; };
+		BB2E4ABA1E2553AA00C99860 /* AdvertisementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E4AB91E2553AA00C99860 /* AdvertisementData.swift */; };
 		BB571D791E22A6F50028773B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571D781E22A6F50028773B /* AppDelegate.swift */; };
 		BB571D801E22A6F50028773B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB571D7F1E22A6F50028773B /* Assets.xcassets */; };
 		BB571D831E22A6F50028773B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB571D811E22A6F50028773B /* LaunchScreen.storyboard */; };
 		BB571D8E1E22A6F50028773B /* EchoBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571D8D1E22A6F50028773B /* EchoBLETests.swift */; };
+		BB731BDF1E27C009009F8A6A /* AdvertisementExtensionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB731BDE1E27C009009F8A6A /* AdvertisementExtensionType.swift */; };
+		BB731BE11E27C05D009F8A6A /* AdvertisementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */; };
 		BB8E795D1E23CFB00047B269 /* Peripheral.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8E795C1E23CFB00047B269 /* Peripheral.storyboard */; };
 		BB8E795F1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */; };
 		BB8E79611E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */; };
@@ -21,6 +26,9 @@
 		BBDB1F991E22B1FF00242D3B /* ScanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */; };
 		BBDB1F9D1E23825900242D3B /* ScanListPeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F9B1E23825900242D3B /* ScanListPeripheralTableViewCell.swift */; };
 		BBDB1F9E1E23825900242D3B /* ScanListPeripheralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDB1F9C1E23825900242D3B /* ScanListPeripheralTableViewCell.xib */; };
+		BBE7428F1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7428D1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift */; };
+		BBE742901E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE7428E1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib */; };
+		BBE742921E27E18200C2838C /* PeripheralStateUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE742911E27E18200C2838C /* PeripheralStateUpdateDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB2E4AB51E25522600C99860 /* AdverstisementDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdverstisementDataTableViewCell.swift; sourceTree = "<group>"; };
+		BB2E4AB61E25522600C99860 /* AdverstisementDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdverstisementDataTableViewCell.xib; sourceTree = "<group>"; };
+		BB2E4AB91E2553AA00C99860 /* AdvertisementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementData.swift; sourceTree = "<group>"; };
 		BB571D751E22A6F50028773B /* EchoBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB571D781E22A6F50028773B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB571D7F1E22A6F50028773B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +53,8 @@
 		BB571D891E22A6F50028773B /* EchoBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB571D8D1E22A6F50028773B /* EchoBLETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoBLETests.swift; sourceTree = "<group>"; };
 		BB571D8F1E22A6F50028773B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB731BDE1E27C009009F8A6A /* AdvertisementExtensionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementExtensionType.swift; sourceTree = "<group>"; };
+		BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementType.swift; sourceTree = "<group>"; };
 		BB8E795C1E23CFB00047B269 /* Peripheral.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Peripheral.storyboard; sourceTree = "<group>"; };
 		BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPeripheralNameSectionHeader.swift; sourceTree = "<group>"; };
 		BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPeripheralNameSectionHeader.xib; sourceTree = "<group>"; };
@@ -52,6 +65,9 @@
 		BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanListViewController.swift; sourceTree = "<group>"; };
 		BBDB1F9B1E23825900242D3B /* ScanListPeripheralTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanListPeripheralTableViewCell.swift; sourceTree = "<group>"; };
 		BBDB1F9C1E23825900242D3B /* ScanListPeripheralTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanListPeripheralTableViewCell.xib; sourceTree = "<group>"; };
+		BBE7428D1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionPeripheralStateTableViewCell.swift; sourceTree = "<group>"; };
+		BBE7428E1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionPeripheralStateTableViewCell.xib; sourceTree = "<group>"; };
+		BBE742911E27E18200C2838C /* PeripheralStateUpdateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralStateUpdateDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +186,7 @@
 		BBDB1F8E1E22A88A00242D3B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BB731BDE1E27C009009F8A6A /* AdvertisementExtensionType.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -177,6 +194,8 @@
 		BBDB1F8F1E22A89000242D3B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */,
+				BBE742911E27E18200C2838C /* PeripheralStateUpdateDelegate.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -185,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDB1F931E22A9E500242D3B /* Peripheral.swift */,
+				BB2E4AB91E2553AA00C99860 /* AdvertisementData.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -204,6 +224,10 @@
 				BBDB1F9C1E23825900242D3B /* ScanListPeripheralTableViewCell.xib */,
 				BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */,
 				BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */,
+				BB2E4AB51E25522600C99860 /* AdverstisementDataTableViewCell.swift */,
+				BB2E4AB61E25522600C99860 /* AdverstisementDataTableViewCell.xib */,
+				BBE7428D1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift */,
+				BBE7428E1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -218,6 +242,7 @@
 				BB571D711E22A6F50028773B /* Sources */,
 				BB571D721E22A6F50028773B /* Frameworks */,
 				BB571D731E22A6F50028773B /* Resources */,
+				BB61F9461E23F21800992974 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -296,6 +321,8 @@
 				BBDB1F9E1E23825900242D3B /* ScanListPeripheralTableViewCell.xib in Resources */,
 				BB571D831E22A6F50028773B /* LaunchScreen.storyboard in Resources */,
 				BB8E79611E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib in Resources */,
+				BBE742901E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib in Resources */,
+				BB2E4AB81E25522600C99860 /* AdverstisementDataTableViewCell.xib in Resources */,
 				BB8E795D1E23CFB00047B269 /* Peripheral.storyboard in Resources */,
 				BB571D801E22A6F50028773B /* Assets.xcassets in Resources */,
 				BBDB1F971E22B01800242D3B /* Scan.storyboard in Resources */,
@@ -311,6 +338,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BB61F9461E23F21800992974 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB571D711E22A6F50028773B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -319,10 +362,16 @@
 				BBDB1F911E22A8B500242D3B /* BluetoothManager.swift in Sources */,
 				BBDB1F9D1E23825900242D3B /* ScanListPeripheralTableViewCell.swift in Sources */,
 				BB8E795F1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift in Sources */,
+				BBE7428F1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift in Sources */,
+				BBE742921E27E18200C2838C /* PeripheralStateUpdateDelegate.swift in Sources */,
+				BB2E4AB71E25522600C99860 /* AdverstisementDataTableViewCell.swift in Sources */,
 				BB571D791E22A6F50028773B /* AppDelegate.swift in Sources */,
 				BBDB1F941E22A9E500242D3B /* Peripheral.swift in Sources */,
+				BB2E4ABA1E2553AA00C99860 /* AdvertisementData.swift in Sources */,
 				BBDB1F991E22B1FF00242D3B /* ScanListViewController.swift in Sources */,
 				BB8E79631E23D37E0047B269 /* DetailPeripheralViewController.swift in Sources */,
+				BB731BDF1E27C009009F8A6A /* AdvertisementExtensionType.swift in Sources */,
+				BB731BE11E27C05D009F8A6A /* AdvertisementType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +501,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44Q2J6374R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EchoBLE",
+				);
 				INFOPLIST_FILE = EchoBLE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = remi.robert.EchoBLE;
@@ -465,6 +518,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44Q2J6374R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EchoBLE",
+				);
 				INFOPLIST_FILE = EchoBLE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = remi.robert.EchoBLE;

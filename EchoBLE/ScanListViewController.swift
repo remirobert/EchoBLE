@@ -16,7 +16,8 @@ class ScanListViewController: UIViewController {
         super.viewDidLoad()
 
         BluetoothManager.shared.delegate = self
-        tableview.register(UINib(nibName: "ScanListPeripheralTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        let nib = UINib(nibName: "ScanListPeripheralTableViewCell", bundle: nil)
+        tableview.register(nib, forCellReuseIdentifier: "cell")
         tableview.dataSource = self
         tableview.delegate = self
     }
@@ -54,7 +55,10 @@ extension ScanListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "cell") as! ScanListPeripheralTableViewCell
+        guard let cell = tableview.dequeueReusableCell(withIdentifier: "cell") as?
+            ScanListPeripheralTableViewCell else {
+            return UITableViewCell()
+        }
 
         guard let indexKey = BluetoothManager.shared.visiblePeripheralUUIDs.object(at: indexPath.row) as? String,
             let peripheral = BluetoothManager.shared.visiblePeripherals[indexKey] else {
