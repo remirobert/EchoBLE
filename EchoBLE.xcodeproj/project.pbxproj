@@ -18,6 +18,7 @@
 		BB731BE11E27C05D009F8A6A /* AdvertisementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */; };
 		BB8DDF231E29397F00306B71 /* RSSITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8DDF211E29397F00306B71 /* RSSITableViewCell.swift */; };
 		BB8DDF241E29397F00306B71 /* RSSITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8DDF221E29397F00306B71 /* RSSITableViewCell.xib */; };
+		BB8DDF261E295FD500306B71 /* RSSI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8DDF251E295FD500306B71 /* RSSI.swift */; };
 		BB8E795D1E23CFB00047B269 /* Peripheral.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8E795C1E23CFB00047B269 /* Peripheral.storyboard */; };
 		BB8E795F1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */; };
 		BB8E79611E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */; };
@@ -61,6 +62,7 @@
 		BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementType.swift; sourceTree = "<group>"; };
 		BB8DDF211E29397F00306B71 /* RSSITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSITableViewCell.swift; sourceTree = "<group>"; };
 		BB8DDF221E29397F00306B71 /* RSSITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSITableViewCell.xib; sourceTree = "<group>"; };
+		BB8DDF251E295FD500306B71 /* RSSI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSI.swift; sourceTree = "<group>"; };
 		BB8E795C1E23CFB00047B269 /* Peripheral.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Peripheral.storyboard; sourceTree = "<group>"; };
 		BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPeripheralNameSectionHeader.swift; sourceTree = "<group>"; };
 		BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPeripheralNameSectionHeader.xib; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				BBDB1F931E22A9E500242D3B /* Device.swift */,
 				BB2E4AB91E2553AA00C99860 /* AdvertisementData.swift */,
+				BB8DDF251E295FD500306B71 /* RSSI.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				BBDB1F9D1E23825900242D3B /* ScanListPeripheralTableViewCell.swift in Sources */,
 				BBDCD9891E29352B00BAE5E6 /* PeripheralManagerDelegate.swift in Sources */,
 				BB8E795F1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift in Sources */,
+				BB8DDF261E295FD500306B71 /* RSSI.swift in Sources */,
 				BBE7428F1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift in Sources */,
 				BBE742921E27E18200C2838C /* DeviceStateUpdateDelegate.swift in Sources */,
 				BB8DDF231E29397F00306B71 /* RSSITableViewCell.swift in Sources */,

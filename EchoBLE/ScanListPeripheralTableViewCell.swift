@@ -20,7 +20,7 @@ class ScanListPeripheralTableViewCell: UITableViewCell {
 
     func configure(peripheral: Device) {
         self.labelNamePeripheral.text = peripheral.name
-        self.labelRSSI.text = peripheral.RSSI
+        self.labelRSSI.text = peripheral.RSSI.current() ?? "N/A"
         self.labelUUIDPeripheral.text = peripheral.UUID
 
         self.labelNamePeripheral.textColor = peripheral.connectable ?

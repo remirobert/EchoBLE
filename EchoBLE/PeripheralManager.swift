@@ -62,8 +62,7 @@ extension PeripheralManager: DeviceStateUpdateDelegate {
     func didUpdateState(state: DeviceConnectState) {
         if state == .connected {
             startTimer()
-        }
-        else {
+        } else {
             stopTimer()
         }
         DispatchQueue.main.async {
@@ -76,7 +75,7 @@ extension PeripheralManager: CBPeripheralDelegate {
 
     func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
         print("🐸🍰 read RSSI device : \(RSSI)")
-        device.RSSI = RSSI.stringValue
+        device.RSSI.append(value: RSSI.stringValue)
         DispatchQueue.main.async {
             self.delegate?.didUpdateRSSI()
         }

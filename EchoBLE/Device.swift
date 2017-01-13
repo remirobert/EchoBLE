@@ -17,20 +17,20 @@ enum DeviceConnectState {
 }
 
 class Device {
-    var peripheral: CBPeripheral
-    var name: String?
+    let peripheral: CBPeripheral
+    let name: String?
     var UUID: String
-    var RSSI: String
+    let RSSI: RSSIContainer
     var connectable = false
-    var advertisementData: AdvertisementData
+    let advertisementData: AdvertisementData
     var connectionState: DeviceConnectState = .disconnected
     weak var delegate: DeviceStateUpdateDelegate?
 
     init(peripheral: CBPeripheral, RSSI: String, advertisementDictionary: NSDictionary) {
         self.peripheral = peripheral
+        self.RSSI = RSSIContainer()
         name = peripheral.name ?? "N/A"
         UUID = peripheral.identifier.uuidString
-        self.RSSI = RSSI
         if let isConnectable = advertisementDictionary[CBAdvertisementDataIsConnectable] as? NSNumber {
             connectable = isConnectable.boolValue
         }

@@ -93,7 +93,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
         let uuid = peripheral.identifier.uuidString
 
         if let visible = visiblePeripherals[peripheral.identifier.uuidString] {
-            visible.RSSI = RSSI.stringValue
+            visible.RSSI.append(value: RSSI.stringValue)
         }
         else {
             visiblePeripheralUUIDs.add(peripheral.identifier.uuidString)

@@ -23,6 +23,11 @@ class DetailPeripheralViewController: UIViewController {
         let _ = navigationController?.popViewController(animated: true)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        peripheralManager.manageConnection()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

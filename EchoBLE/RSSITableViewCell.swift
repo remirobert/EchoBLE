@@ -17,6 +17,6 @@ class RSSITableViewCell: UITableViewCell {
     }
 
     func configure(device: Device) {
-        labelValue.text = device.RSSI
+        labelValue.text = device.RSSI.current() ?? "N/A"
     }
 }
