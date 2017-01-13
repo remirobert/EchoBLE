@@ -25,16 +25,16 @@ class ConnectionPeripheralStateTableViewCell: UITableViewCell {
         case .connected:
             buttonState.setTitle("Disconnect", for: .normal)
             buttonState.setTitleColor(UIColor.red, for: .normal)
-        case .processing:
-            indicator.isHidden = false
-            indicator.startAnimating()
-            buttonState.isHidden = true
         case .disconnected:
             buttonState.setTitle("Connect", for: .normal)
             buttonState.setTitleColor(UIColor.black, for: .normal)
         case .failedToConnect:
             buttonState.setTitle("Fail to connect", for: .normal)
             buttonState.setTitleColor(UIColor.red, for: .normal)
+        case .processing:
+            indicator.isHidden = false
+            indicator.startAnimating()
+            buttonState.isHidden = true
         }
     }
 }

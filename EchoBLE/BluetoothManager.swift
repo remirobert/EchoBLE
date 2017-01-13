@@ -42,11 +42,17 @@ final class BluetoothManager: NSObject {
     }
 
     func connectTo(peripheral: Peripheral) {
+        if peripheral.connectionState  == .connected {
+            return
+        }
         manager.connect(peripheral.peripheral, options: nil)
         updateState(uuid: peripheral.UUID, state: .processing)
     }
 
     func disconnect(peripheral: Peripheral) {
+        if !(peripheral.connectionState == .connected) {
+            return
+        }
         //close caracteristics and services notifications before canceling
         manager.cancelPeripheralConnection(peripheral.peripheral)
         updateState(uuid: peripheral.UUID, state: .processing)

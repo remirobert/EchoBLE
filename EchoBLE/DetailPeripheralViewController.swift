@@ -28,7 +28,7 @@ class DetailPeripheralViewController: UIViewController {
     @objc func back(sender: AnyObject!) {
         peripheral.delegate = nil
         BluetoothManager.shared.disconnect(peripheral: peripheral)
-        navigationController?.popViewController(animated: true)
+        let _ = navigationController?.popViewController(animated: true)
     }
 
     override func viewDidLoad() {

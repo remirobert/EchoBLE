@@ -25,3 +25,12 @@ extension NSNumber: AdvertisementType {
         return self.stringValue
     }
 }
+
+extension Array: AdvertisementType {
+    func displayValue() -> String {
+        return self.reduce("") { (result, element) -> String in
+            guard let element = element as? AdvertisementType else { return result }
+            return "\(result)\(result.characters.count > 0 ? "\n" : "")\(element.displayValue())"
+        }
+    }
+}
