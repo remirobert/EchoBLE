@@ -17,7 +17,7 @@ class DetailPeripheralNameSectionHeader: UITableViewHeaderFooterView {
         super.awakeFromNib()
     }
 
-    func configure(peripheral: Peripheral) {
+    func configure(peripheral: Device) {
         self.labelName.text = peripheral.name
         self.labelUUID.text = peripheral.UUID
     }

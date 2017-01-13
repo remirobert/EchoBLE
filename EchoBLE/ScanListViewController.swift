@@ -25,7 +25,8 @@ class ScanListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueDetail" {
             guard let controller = segue.destination as? DetailPeripheralViewController else {return}
-            controller.peripheral = sender as? Peripheral
+            guard let device = sender as? Device else {return}
+            controller.peripheralManager = PeripheralManager(device: device)
         }
     }
 }

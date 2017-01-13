@@ -6,6 +6,6 @@
 //  Copyright © 2017 Remi Robert. All rights reserved.
 //
 
-protocol PeripheralStateUpdateDelegate: class {
-    func didUpdateState(state: PeripheralConnectState)
+protocol DeviceStateUpdateDelegate: class {
+    func didUpdateState(state: DeviceConnectState)
 }

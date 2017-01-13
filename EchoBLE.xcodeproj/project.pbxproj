@@ -16,19 +16,23 @@
 		BB571D8E1E22A6F50028773B /* EchoBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB571D8D1E22A6F50028773B /* EchoBLETests.swift */; };
 		BB731BDF1E27C009009F8A6A /* AdvertisementExtensionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB731BDE1E27C009009F8A6A /* AdvertisementExtensionType.swift */; };
 		BB731BE11E27C05D009F8A6A /* AdvertisementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */; };
+		BB8DDF231E29397F00306B71 /* RSSITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8DDF211E29397F00306B71 /* RSSITableViewCell.swift */; };
+		BB8DDF241E29397F00306B71 /* RSSITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8DDF221E29397F00306B71 /* RSSITableViewCell.xib */; };
 		BB8E795D1E23CFB00047B269 /* Peripheral.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8E795C1E23CFB00047B269 /* Peripheral.storyboard */; };
 		BB8E795F1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */; };
 		BB8E79611E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */; };
 		BB8E79631E23D37E0047B269 /* DetailPeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8E79621E23D37E0047B269 /* DetailPeripheralViewController.swift */; };
 		BBDB1F911E22A8B500242D3B /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F901E22A8B500242D3B /* BluetoothManager.swift */; };
-		BBDB1F941E22A9E500242D3B /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F931E22A9E500242D3B /* Peripheral.swift */; };
+		BBDB1F941E22A9E500242D3B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F931E22A9E500242D3B /* Device.swift */; };
 		BBDB1F971E22B01800242D3B /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDB1F961E22B01800242D3B /* Scan.storyboard */; };
 		BBDB1F991E22B1FF00242D3B /* ScanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */; };
 		BBDB1F9D1E23825900242D3B /* ScanListPeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB1F9B1E23825900242D3B /* ScanListPeripheralTableViewCell.swift */; };
 		BBDB1F9E1E23825900242D3B /* ScanListPeripheralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDB1F9C1E23825900242D3B /* ScanListPeripheralTableViewCell.xib */; };
+		BBDCD9871E292F3C00BAE5E6 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCD9861E292F3C00BAE5E6 /* PeripheralManager.swift */; };
+		BBDCD9891E29352B00BAE5E6 /* PeripheralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCD9881E29352B00BAE5E6 /* PeripheralManagerDelegate.swift */; };
 		BBE7428F1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7428D1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift */; };
 		BBE742901E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE7428E1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib */; };
-		BBE742921E27E18200C2838C /* PeripheralStateUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE742911E27E18200C2838C /* PeripheralStateUpdateDelegate.swift */; };
+		BBE742921E27E18200C2838C /* DeviceStateUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE742911E27E18200C2838C /* DeviceStateUpdateDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,19 +59,23 @@
 		BB571D8F1E22A6F50028773B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB731BDE1E27C009009F8A6A /* AdvertisementExtensionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementExtensionType.swift; sourceTree = "<group>"; };
 		BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementType.swift; sourceTree = "<group>"; };
+		BB8DDF211E29397F00306B71 /* RSSITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSITableViewCell.swift; sourceTree = "<group>"; };
+		BB8DDF221E29397F00306B71 /* RSSITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSITableViewCell.xib; sourceTree = "<group>"; };
 		BB8E795C1E23CFB00047B269 /* Peripheral.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Peripheral.storyboard; sourceTree = "<group>"; };
 		BB8E795E1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPeripheralNameSectionHeader.swift; sourceTree = "<group>"; };
 		BB8E79601E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPeripheralNameSectionHeader.xib; sourceTree = "<group>"; };
 		BB8E79621E23D37E0047B269 /* DetailPeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPeripheralViewController.swift; sourceTree = "<group>"; };
 		BBDB1F901E22A8B500242D3B /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
-		BBDB1F931E22A9E500242D3B /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		BBDB1F931E22A9E500242D3B /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		BBDB1F961E22B01800242D3B /* Scan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
 		BBDB1F981E22B1FF00242D3B /* ScanListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanListViewController.swift; sourceTree = "<group>"; };
 		BBDB1F9B1E23825900242D3B /* ScanListPeripheralTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanListPeripheralTableViewCell.swift; sourceTree = "<group>"; };
 		BBDB1F9C1E23825900242D3B /* ScanListPeripheralTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanListPeripheralTableViewCell.xib; sourceTree = "<group>"; };
+		BBDCD9861E292F3C00BAE5E6 /* PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
+		BBDCD9881E29352B00BAE5E6 /* PeripheralManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralManagerDelegate.swift; sourceTree = "<group>"; };
 		BBE7428D1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionPeripheralStateTableViewCell.swift; sourceTree = "<group>"; };
 		BBE7428E1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionPeripheralStateTableViewCell.xib; sourceTree = "<group>"; };
-		BBE742911E27E18200C2838C /* PeripheralStateUpdateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralStateUpdateDelegate.swift; sourceTree = "<group>"; };
+		BBE742911E27E18200C2838C /* DeviceStateUpdateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStateUpdateDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDB1F901E22A8B500242D3B /* BluetoothManager.swift */,
+				BBDCD9861E292F3C00BAE5E6 /* PeripheralManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -195,7 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				BB731BE01E27C05D009F8A6A /* AdvertisementType.swift */,
-				BBE742911E27E18200C2838C /* PeripheralStateUpdateDelegate.swift */,
+				BBE742911E27E18200C2838C /* DeviceStateUpdateDelegate.swift */,
+				BBDCD9881E29352B00BAE5E6 /* PeripheralManagerDelegate.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -203,7 +213,7 @@
 		BBDB1F921E22A9DC00242D3B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BBDB1F931E22A9E500242D3B /* Peripheral.swift */,
+				BBDB1F931E22A9E500242D3B /* Device.swift */,
 				BB2E4AB91E2553AA00C99860 /* AdvertisementData.swift */,
 			);
 			name = Models;
@@ -228,6 +238,8 @@
 				BB2E4AB61E25522600C99860 /* AdverstisementDataTableViewCell.xib */,
 				BBE7428D1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift */,
 				BBE7428E1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib */,
+				BB8DDF211E29397F00306B71 /* RSSITableViewCell.swift */,
+				BB8DDF221E29397F00306B71 /* RSSITableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -321,6 +333,7 @@
 				BBDB1F9E1E23825900242D3B /* ScanListPeripheralTableViewCell.xib in Resources */,
 				BB571D831E22A6F50028773B /* LaunchScreen.storyboard in Resources */,
 				BB8E79611E23D18C0047B269 /* DetailPeripheralNameSectionHeader.xib in Resources */,
+				BB8DDF241E29397F00306B71 /* RSSITableViewCell.xib in Resources */,
 				BBE742901E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.xib in Resources */,
 				BB2E4AB81E25522600C99860 /* AdverstisementDataTableViewCell.xib in Resources */,
 				BB8E795D1E23CFB00047B269 /* Peripheral.storyboard in Resources */,
@@ -361,12 +374,15 @@
 			files = (
 				BBDB1F911E22A8B500242D3B /* BluetoothManager.swift in Sources */,
 				BBDB1F9D1E23825900242D3B /* ScanListPeripheralTableViewCell.swift in Sources */,
+				BBDCD9891E29352B00BAE5E6 /* PeripheralManagerDelegate.swift in Sources */,
 				BB8E795F1E23D16F0047B269 /* DetailPeripheralNameSectionHeader.swift in Sources */,
 				BBE7428F1E27D87300C2838C /* ConnectionPeripheralStateTableViewCell.swift in Sources */,
-				BBE742921E27E18200C2838C /* PeripheralStateUpdateDelegate.swift in Sources */,
+				BBE742921E27E18200C2838C /* DeviceStateUpdateDelegate.swift in Sources */,
+				BB8DDF231E29397F00306B71 /* RSSITableViewCell.swift in Sources */,
+				BBDCD9871E292F3C00BAE5E6 /* PeripheralManager.swift in Sources */,
 				BB2E4AB71E25522600C99860 /* AdverstisementDataTableViewCell.swift in Sources */,
 				BB571D791E22A6F50028773B /* AppDelegate.swift in Sources */,
-				BBDB1F941E22A9E500242D3B /* Peripheral.swift in Sources */,
+				BBDB1F941E22A9E500242D3B /* Device.swift in Sources */,
 				BB2E4ABA1E2553AA00C99860 /* AdvertisementData.swift in Sources */,
 				BBDB1F991E22B1FF00242D3B /* ScanListViewController.swift in Sources */,
 				BB8E79631E23D37E0047B269 /* DetailPeripheralViewController.swift in Sources */,

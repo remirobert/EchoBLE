@@ -21,7 +21,7 @@ final class BluetoothManager: NSObject {
 
     var isEnabled = false
     var visiblePeripheralUUIDs = NSMutableOrderedSet()
-    var visiblePeripherals = [String: Peripheral]()
+    var visiblePeripherals = [String: Device]()
 
     weak var delegate: BluetoothManagerDelegate?
 
@@ -41,24 +41,24 @@ final class BluetoothManager: NSObject {
         manager.stopScan()
     }
 
-    func connectTo(peripheral: Peripheral) {
-        if peripheral.connectionState  == .connected {
+    func connectTo(device: Device) {
+        if device.connectionState  == .connected {
             return
         }
-        manager.connect(peripheral.peripheral, options: nil)
-        updateState(uuid: peripheral.UUID, state: .processing)
+        manager.connect(device.peripheral, options: nil)
+        updateState(uuid: device.UUID, state: .processing)
     }
 
-    func disconnect(peripheral: Peripheral) {
-        if !(peripheral.connectionState == .connected) {
+    func disconnect(device: Device) {
+        if !(device.connectionState == .connected) {
             return
         }
         //close caracteristics and services notifications before canceling
-        manager.cancelPeripheralConnection(peripheral.peripheral)
-        updateState(uuid: peripheral.UUID, state: .processing)
+        manager.cancelPeripheralConnection(device.peripheral)
+        updateState(uuid: device.UUID, state: .processing)
     }
 
-    fileprivate func updateState(uuid: String, state: PeripheralConnectState) {
+    fileprivate func updateState(uuid: String, state: DeviceConnectState) {
         let currentPeripheral = visiblePeripherals[uuid]
         currentPeripheral?.connectionState = state
         DispatchQueue.main.async {
@@ -97,7 +97,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
         }
         else {
             visiblePeripheralUUIDs.add(peripheral.identifier.uuidString)
-            visiblePeripherals[peripheral.identifier.uuidString] = Peripheral(peripheral: peripheral,
+            visiblePeripherals[peripheral.identifier.uuidString] = Device(peripheral: peripheral,
                                                                               RSSI: RSSI.stringValue, advertisementDictionary: advertisementData as NSDictionary)
         }
         DispatchQueue.main.async {

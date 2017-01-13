@@ -9,22 +9,22 @@
 import UIKit
 import CoreBluetooth
 
-enum PeripheralConnectState {
+enum DeviceConnectState {
     case processing
     case connected
     case disconnected
     case failedToConnect
 }
 
-class Peripheral {
+class Device {
     var peripheral: CBPeripheral
     var name: String?
     var UUID: String
     var RSSI: String
     var connectable = false
     var advertisementData: AdvertisementData
-    var connectionState: PeripheralConnectState = .disconnected
-    weak var delegate: PeripheralStateUpdateDelegate?
+    var connectionState: DeviceConnectState = .disconnected
+    weak var delegate: DeviceStateUpdateDelegate?
 
     init(peripheral: CBPeripheral, RSSI: String, advertisementDictionary: NSDictionary) {
         self.peripheral = peripheral

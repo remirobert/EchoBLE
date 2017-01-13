@@ -18,7 +18,7 @@ class ScanListPeripheralTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func configure(peripheral: Peripheral) {
+    func configure(peripheral: Device) {
         self.labelNamePeripheral.text = peripheral.name
         self.labelRSSI.text = peripheral.RSSI
         self.labelUUIDPeripheral.text = peripheral.UUID

@@ -18,7 +18,7 @@ class ConnectionPeripheralStateTableViewCell: UITableViewCell {
         indicator.hidesWhenStopped = true
     }
 
-    func configure(state: PeripheralConnectState) {
+    func configure(state: DeviceConnectState) {
         indicator.stopAnimating()
         buttonState.isHidden = false
         switch state {

@@ -10,24 +10,16 @@ import UIKit
 
 class DetailPeripheralViewController: UIViewController {
 
-    var peripheral: Peripheral!
+    var peripheralManager: PeripheralManager!
 
     @IBOutlet weak var tableview: UITableView!
 
     @objc func connectionButton() {
-        switch peripheral.connectionState {
-        case .connected:
-            BluetoothManager.shared.disconnect(peripheral: peripheral)
-        case .disconnected:
-            BluetoothManager.shared.connectTo(peripheral: peripheral)
-        default:
-            break
-        }
+        peripheralManager.manageConnection()
     }
 
     @objc func back(sender: AnyObject!) {
-        peripheral.delegate = nil
-        BluetoothManager.shared.disconnect(peripheral: peripheral)
+        peripheralManager.manageConnection(closeConnection: true)
         let _ = navigationController?.popViewController(animated: true)
     }
 
@@ -47,22 +39,30 @@ class DetailPeripheralViewController: UIViewController {
         let nibValueConnect = UINib(nibName: "ConnectionPeripheralStateTableViewCell", bundle: nil)
         tableview.register(nibValueConnect, forCellReuseIdentifier: "cellConnect")
 
+        let rssiNib = UINib(nibName: "RSSITableViewCell", bundle: nil)
+        tableview.register(rssiNib, forCellReuseIdentifier: "cellRSSI")
+
         tableview.delegate = self
         tableview.dataSource = self
         tableview.tableFooterView = UIView()
         tableview.sectionHeaderHeight = 109
 
-        peripheral.delegate = self
-
-        print("keys : \(peripheral.advertisementData.keys)")
+        peripheralManager.delegate = self
     }
 }
 
-extension DetailPeripheralViewController: PeripheralStateUpdateDelegate {
+extension DetailPeripheralViewController: PeripheralManagerDelegate {
 
-    func didUpdateState(state: PeripheralConnectState) {
+    func didUpdateState(state: DeviceConnectState) {
         print("🦄 receive delegate update state")
+        if state == .connected {
+            peripheralManager.readServices()
+        }
         tableview.reloadRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.automatic)
+    }
+
+    func didUpdateRSSI() {
+        tableview.reloadRows(at: [IndexPath(row: 1, section: 0)], with: UITableViewRowAnimation.automatic)
     }
 }
 
@@ -80,7 +80,7 @@ extension DetailPeripheralViewController: UITableViewDelegate {
             as? DetailPeripheralNameSectionHeader else {
             return UIView()
         }
-        header.configure(peripheral: peripheral)
+        header.configure(peripheral: peripheralManager.device)
         return header
     }
 }
@@ -92,28 +92,35 @@ extension DetailPeripheralViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 1 ? peripheral.advertisementData.values.count : 1
+        return section == 1 ? peripheralManager.device.advertisementData.values.count : 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellConnect")
-                as? ConnectionPeripheralStateTableViewCell else {
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellConnect")
+                    as? ConnectionPeripheralStateTableViewCell else {
+                        return UITableViewCell()
+                }
+                cell.buttonState.addTarget(self, action: #selector(DetailPeripheralViewController.connectionButton), for: .touchUpInside)
+                cell.configure(state: peripheralManager.device.connectionState)
+                return cell
+            }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellRSSI") as? RSSITableViewCell else {
                     return UITableViewCell()
             }
-            cell.buttonState.addTarget(self, action: #selector(DetailPeripheralViewController.connectionButton), for: .touchUpInside)
-            cell.configure(state: peripheral.connectionState)
+            cell.configure(device: peripheralManager.device)
             return cell
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellAd")
             as? AdverstisementDataTableViewCell else {
             return UITableViewCell()
         }
-        guard let key = peripheral.advertisementData.keys[indexPath.row] as? String else {
+        guard let key = peripheralManager.device.advertisementData.keys[indexPath.row] as? String else {
             return UITableViewCell()
         }
 
-        if let value = peripheral.advertisementData.values[key] {
+        if let value = peripheralManager.device.advertisementData.values[key] {
             cell.configure(value: value, key: key)
         }
         return cell
