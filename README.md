@@ -1,2 +1,2 @@
 # EchoBLE
-BLE sniffer iOS app
+BLE sniffer iOS app using CoreBluetooth.
